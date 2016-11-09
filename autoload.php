@@ -5,12 +5,11 @@
  */
 namespace Cranberry\Core;
 
-$pathBaseCore	= __DIR__;
-$pathSrcCore	= $pathBaseCore . '/src/Core';
-$pathVendorCore	= $pathBaseCore . '/vendor';
+$pathCranberryCoreBase = __DIR__;
+$pathCranberryCoreSrc = $pathCranberryCoreBase . '/src/Core';
 
 /*
  * Initialize autoloading
  */
-include_once( $pathSrcCore . '/Autoloader.php' );
+include_once( $pathCranberryCoreSrc . '/Autoloader.php' );
 Autoloader::register();
