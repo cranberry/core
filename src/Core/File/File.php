@@ -105,6 +105,14 @@ class File extends \SplFileInfo
 	}
 
 	/**
+	 * @return	boolean
+	 */
+	public function isSymlink()
+	{
+		return is_link( $this->getPathname() );
+	}
+
+	/**
 	 * @param	Cranberry\Core\File\File		$target
 	 * @return	void
 	 */
