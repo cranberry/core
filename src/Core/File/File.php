@@ -141,6 +141,18 @@ class File extends \SplFileInfo
 	}
 
 	/**
+	 * @param	string	$newName
+	 */
+	public function rename( $newName )
+	{
+		$targetFile = $this
+			->parent()
+			->child( $newName );
+
+		return $this->moveTo( $targetFile );
+	}
+
+	/**
 	 * @return	boolean
 	 */
 	public function unlink()
