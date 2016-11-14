@@ -6,6 +6,7 @@
 namespace Cranberry\Core;
 
 use Cranberry\Core\File;
+use Cranberry\Core\JSON;
 
 class Config
 {
@@ -28,7 +29,7 @@ class Config
 		if( $source->exists() )
 		{
 			$json = $source->getContents();
-			$this->data = json_decode( $json, true );
+			$this->data = JSON::decode( $json, true );
 		}
 
 		$this->source = $source;
@@ -82,7 +83,7 @@ class Config
 	 */
 	public function write()
 	{
-		$encodedData = json_encode( $this->data, JSON_PRETTY_PRINT );
-		$this->source->putContents( $encodedData );
+		$encodedData = JSON::encode( $this->data, JSON_PRETTY_PRINT );
+		$this->source->putContents( $encodedData . PHP_EOL );
 	}
 }
