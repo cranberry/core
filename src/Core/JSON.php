@@ -34,14 +34,14 @@ class JSON
 	/**
 	 * Perform standard JSON encode, throwing an exception on error
 	 *
-	 * @param	array	$array
+	 * @param	mixed	$value
 	 * @param	int		$options
 	 * @param	int		$depth
 	 * @return	string
 	 */
-	static public function encode( array $array, $options=0, $depth=512 )
+	static public function encode( $value, $options=0, $depth=512 )
 	{
-		$result = json_encode( $array, $options, $depth );
+		$result = json_encode( $value, $options, $depth );
 
 		$errorCode = json_last_error();
 		$errorMessage = json_last_error_msg();
