@@ -42,6 +42,7 @@ class String
 	 */
 	static public function strtoupper( $string, $encoding=null )
 	{
+		$encoding = is_null( $encoding ) ? mb_internal_encoding() : $encoding;
 		return mb_strtoupper( $string, $encoding );
 	}
 
