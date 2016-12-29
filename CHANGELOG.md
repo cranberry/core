@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to will be documented in this file.
+All notable changes to Cranberry\Core will be documented in this file.
 
 ## [Unreleased]
 ### Fixed
