@@ -24,7 +24,7 @@ class HTTP
 	{
 		if( is_string( $request ) )
 		{
-			$request = new HTTP\Request( $request );
+			$request = new Request( $request );
 		}
 
 		$curl = curl_init();
@@ -52,7 +52,7 @@ class HTTP
 
 		curl_close( $curl );
 
-		return new HTTP\Response( $body, $info, $error );
+		return new Response( $body, $info, $error );
 	}
 
 	/**
