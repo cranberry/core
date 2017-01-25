@@ -3,6 +3,8 @@
 All notable changes to Cranberry\Core will be documented in this file.
 
 ## [Unreleased]
+### Fixed
+- Attempt to create config source file if it doesn't exist
 
 ## [0.1.2] - 2016-12-29
 ### Fixed

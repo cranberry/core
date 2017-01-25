@@ -31,6 +31,10 @@ class Config
 			$json = $source->getContents();
 			$this->data = JSON::decode( $json, true );
 		}
+		else
+		{
+			$source->create();
+		}
 
 		$this->source = $source;
 	}
