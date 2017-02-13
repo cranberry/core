@@ -34,6 +34,9 @@ class HTTP
 		curl_setopt( $curl, CURLOPT_HTTPHEADER, $request->getHeaders() );
 		curl_setopt( $curl, CURLOPT_CUSTOMREQUEST, $method );
 
+		/* Set custom options defined in the Request object */
+		curl_setopt_array( $curl, $request->getOptions() );
+
 		if( $method == 'POST' )
 		{
 			$postData = $request->getPostData();

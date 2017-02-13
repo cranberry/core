@@ -13,6 +13,11 @@ class Request
 	protected $headers=[];
 
 	/**
+	 * @var	array
+	 */
+	protected $options=[];
+
+	/**
 	 * @var array
 	 */
 	protected $parameters=[];
@@ -91,6 +96,14 @@ class Request
 	/**
 	 * @return	array
 	 */
+	public function getOptions()
+	{
+		return $this->options;
+	}
+
+	/**
+	 * @return	array
+	 */
 	public function getParameters()
 	{
 		return $this->parameters;
@@ -119,6 +132,17 @@ class Request
 		}
 
 		return $url;
+	}
+
+	/**
+	 * Manually set cURL option values to use during the HTTP request
+	 *
+	 * @param	int		$option
+	 * @param	mixed	$value
+	 */
+	public function registerOption( $option, $value )
+	{
+		$this->options[$option] = $value;
 	}
 
 	/**
