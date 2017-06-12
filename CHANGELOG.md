@@ -4,7 +4,10 @@ All notable changes to Cranberry\Core will be documented in this file.
 
 ## [Unreleased]
 ### Added
-- Support for custom cURL options in `HTTP\Request` 
+- Support for custom cURL options in `HTTP\Request`
+
+### Removed
+- `String` class
 
 ### Fixed
 - Attempt to create config source file if it doesn't exist
