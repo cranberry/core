@@ -3,6 +3,8 @@
 All notable changes to Cranberry\Core will be documented in this file.
 
 ## [Unreleased]
+
+## [0.1.3] - 2017-06-12
 ### Added
 - Support for custom cURL options in `HTTP\Request`
 
