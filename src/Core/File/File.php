@@ -30,7 +30,7 @@ class File extends \SplFileInfo
 	 */
 	public function copyTo( File $target )
 	{
-		exec( "cp -r '{$this}' '{$target}'", $output, $code );
+		exec( "cp -a '{$this}' '{$target}'", $output, $code );
 		return $code == 0;
 	}
 
